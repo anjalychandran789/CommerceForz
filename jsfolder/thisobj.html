@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //method -> object
+ /*const video={
+     title:'a',
+     play(){
+         console.log(this);
+     }
+ };
+
+ video.play();
+
+ const video={
+     title:'a',
+     play(){
+         console.log(this);
+     }
+ };
+video.stop=function(){
+    console.log(this);
+};
+ video.stop();*/
+ 
+
+ //global function
+
+ /*const video={
+     title:'a',
+     play(){
+         console.log(this);
+     }
+ };
+function playvideo(){
+    console.log(this);
+};
+ playvideo();*/
+ // constractor
+/* const video={
+     title:'a',
+     play(){
+         console.log(this);
+     }
+ };
+function Video(title){
+    this.title=title
+    console.log(this);
+}
+ const v= new Video('a');
+   */ 
+   const video={
+       title:'a',
+       tag:['a','b','c'],
+       showTags(){
+           this.tags.forEach(function(tag) {
+            console.log(this.title,tag);    
+       },this);
+       }
+   };
+   video.showTags();
+
+   </script>
+    
+</body>
+</html>

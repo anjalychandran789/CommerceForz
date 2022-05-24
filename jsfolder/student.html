@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./callback.html">
+</head>
+<body>
+    <script>
+        let students=[{name:"anjana",score:90,place:"ktm"},
+        {name:"ammu ",score:67,place:"ekm"},
+        {name:" anna",score:98,place:"ktm"},
+        {name:"krishna ",score:89,place:"ktm"},
+        {name:" amal",score:56,place:"ekm"}];
+        
+        let processStudents=function(data,callback){
+            for(let i=0;i<data.length;i++){
+                if(data[i].place.toLowerCase()==="ktm"){
+                    if(typeof callback==="function"){
+                        callback(data[i]);
+                    }
+                }
+            }
+        }
+        processStudents(students,function(obj){
+            if(obj.score>50){
+                console.log(obj.name +"  passed..");
+            }
+        });
+let totalScore=function(){
+    let total=0,count=0;
+
+    processStudents(students,function(obj){
+      total=total + obj.score;
+      count++;
+     
+    });
+    console.log(" total score is  : "+total+"\n count : "+count);
+    
+}
+totalScore();
+
+    </script>
+</body>
+</html>
