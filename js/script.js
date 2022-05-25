@@ -7,6 +7,7 @@ $('p').click(function(){
     $('p').hide();
 });
 
+
 $('button').click(function(){
     $('p').hide();
 });
@@ -14,8 +15,7 @@ $('p').click(function(){
     $('.text').hide();
 });
 
-Redy event
--------------------
+
 $(document).ready(function(){
     $('button').click(function(){
         $('p').hide();
@@ -29,17 +29,12 @@ $(function(){
     })
 })
 
-SELECTORS
-1)element selector
-2) class selector
-3) id selector
+
 $('button').click(function(){
     $('#para').hide();
 });
 
-if you want to select all the element then use $('*') 
-if you want to select  1st para then $(para:first)
-hide(1000); used for set the time
+
 
 $(document).ready(function(){
     $('button').click(function(){
@@ -50,12 +45,12 @@ $(document).ready(function(){
     });
 });
 
+
 $(document).ready(function(){
     $('button').click(function(){
     $('[href]').hide(1000);
     })
-
-})
+    })
 
 $(document).ready(function(){
     $('button').click(function(){
